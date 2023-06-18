@@ -1,0 +1,18 @@
+# description	: Nix, the purely functional package manager
+# homepage	: https://nixos.org/
+# depends	: mksh-static jq boost flex openssl curl flex brotli libseccomp libgc editline libcpuid curl libarchive libsodium lsof
+
+name=nix
+version=2.16.1
+release=1
+source="https://github.com/NixOS/$name/archive/refs/tags/$version.tar.gz"
+
+build() {
+	cd $name-$version
+	./bootstrap.sh
+	./configure --prefix=/usr \
+		--localstatedir=/nix/var \
+		--with-sandbox-shell=/usr/bin/mksh-static
+	make
+	make DESTDIR=$PKG install
+}
