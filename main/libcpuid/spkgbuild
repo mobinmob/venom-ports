@@ -1,0 +1,15 @@
+# description	: A small C library for x86 CPU detection and feature extraction
+# homepage	: https://github.com/anrieff/libcpuid
+# depends	: 
+
+name=libcpuid
+version=0.6.3
+release=1
+source="https://github.com/anrieff/libcpuid/releases/download/v0.6.3/libcpuid-0.6.3.tar.gz"
+
+build() {
+	cd $name-$version
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+}

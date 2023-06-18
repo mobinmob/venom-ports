@@ -1,0 +1,16 @@
+libcpuid-0.6.3-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/cpuid_tool
+drwxr-xr-x root/root    usr/include/
+drwxr-xr-x root/root    usr/include/libcpuid/
+-rw-r--r-- root/root    usr/include/libcpuid/libcpuid.h
+-rw-r--r-- root/root    usr/include/libcpuid/libcpuid_constants.h
+-rw-r--r-- root/root    usr/include/libcpuid/libcpuid_types.h
+drwxr-xr-x root/root    usr/lib/
+-rw-r--r-- root/root    usr/lib/libcpuid.a
+lrwxrwxrwx root/root    usr/lib/libcpuid.so -> libcpuid.so.16.0.3
+lrwxrwxrwx root/root    usr/lib/libcpuid.so.16 -> libcpuid.so.16.0.3
+-rwxr-xr-x root/root    usr/lib/libcpuid.so.16.0.3
+drwxr-xr-x root/root    usr/lib/pkgconfig/
+-rw-r--r-- root/root    usr/lib/pkgconfig/libcpuid.pc
