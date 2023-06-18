@@ -1,0 +1,15 @@
+# description	: A small replacement for GNU readline() for UNIX 
+# homepage	: https://troglobit.com/projects/editline/
+# depends	: 
+
+name=editline
+version=1.17.1
+release=1
+source="https://github.com/troglobit/editline/releases/download/$version/$name-$version.tar.gz"
+
+build() {
+	cd $name-$version
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+}
