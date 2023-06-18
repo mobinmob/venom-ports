@@ -1,0 +1,15 @@
+# description	: The Boehm-Demers-Weiser conservative C/C++ Garbage Collector
+# homepage	: https://www.hboehm.info/gc/
+# depends	: cmake
+
+name=libgc
+version=8.2.4
+release=1
+source="https://github.com/ivmai/bdwgc/releases/download/v$version/gc-$version.tar.gz"
+
+build() {
+	cd gc-$version
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+}
